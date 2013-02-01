@@ -1,8 +1,7 @@
 <?php
 /**
- * Description of Group
- *
- * @author evandro
+ * @author evandro, l. felipe
+ * description: class have functions and atributes group team
  */
 class Group {
     private static $GROUP = array('a','b','c','d', 'e', 'f', 'g', 'h'); 
@@ -11,9 +10,7 @@ class Group {
     private $output;
     
     //string format impress
-    private $start;
-    
-    //string format impress
+    private $start;       
     private $end;
 
     private $file;
@@ -25,6 +22,9 @@ class Group {
         
         //load file with definitions xml world cup
         $file = simplexml_load_file("schema.xml");
+        
+        //colocar try cath php            
+        
         $this->file = $file;
         
         //create array with all group
@@ -106,8 +106,7 @@ class Group {
                 }                                                
                     $string .= $this->getClassification("f");    
                     return $string;  
-    }
-    
+    }    
     
     public function getGroupG()
     {
@@ -135,8 +134,7 @@ class Group {
     
     //sum each point of one team 
     public function sumPoints($time, $group)
-    {               
-       
+    {                      
         $vet = $this->file->xpath("//grupo[@id='$group']/jogo/time[contains(.,'$time')]/gols");
         
         //get all goals team
@@ -268,8 +266,7 @@ class Group {
             $string .= "<tr><td>".$key." </td><td>"." {$value[0]}"."</td><td>"." {$value[1]}"."</td></tr>";
         }
         
-        $string.="<table>";        
-        
+        $string.="<table>";                
         return $string;
     }
     
@@ -298,16 +295,7 @@ class Group {
             $queryPhase2[] =(string) trim($value);
         
         foreach ($this->file->xpath("//fase[@id='final']/jogo/time") as $value)
-            $queryPhase1[] =(string) trim($value);
-        
-        
-         // print_r($queryPhase1);
-     //   print_r($queryPhase2);
-//        print_r($queryPhase4);
-//        print_r($queryPhase8);
-        
-     //   print_r($teamLoser);
-              
+            $queryPhase1[] =(string) trim($value);                              
         
         foreach ($teamLoser as $value) {
             
@@ -321,55 +309,46 @@ class Group {
             if(array_search($value, $queryPhase4))                                        
             {
               echo "fase quartas ";
-              echo  $value; 
+              exit(1);
             }
             
             if(array_search($value, $queryPhase2))                                        
             {
               echo "fase semifinais ";
-              echo  $value; 
+              exit(1);
             }                        
             
             if(array_search("China", $queryPhase1))                                        
             {
               echo "fase final ";
-              echo  $value; 
+              exit(1);
             }                        
-        }
-                   
-        
+        }                           
     }
     
     //receive phase and list team loser, check if team loser
     public function checkLoserByPhase($phase, $loser)
     {        
         foreach ($this->file->xpath("//fase[@id='$phase']/jogo/time") as $value)
-            $queryPhase[] =(string) trim($value);
-        
-        print_r($queryPhase);
+            $queryPhase[] =(string) trim($value);              
         
         foreach ($loser as $value) {           
             // echo $value;
-            if(array_search($value, $queryPhase))                                        
-            {
-              echo "<br>deu erro  ";
-              echo  $value; 
-              echo "<br>";
-              return TRUE;
-            }
+            if(array_search($value, $queryPhase))                                                    
+              return TRUE;            
         }
         return FALSE;
     }
 
-    //check loser 8
-    public function checkLoser8($namePhase)
-    {       
+    //get all loser by phase
+    public function getLoser($phase)
+    {
         //get all goals team1        
-        foreach ($this->file->xpath("//fase[@id='Oitavas-de-final']/jogo/time[1]/gols") as $value) {
+        foreach ($this->file->xpath("//fase[@id='$phase']/jogo/time[1]/gols") as $value) {
             $goals1[] =(int) $value; 
         }
         //get all team1        
-        foreach ($this->file->xpath("//fase[@id='Oitavas-de-final']/jogo/time[1]") as $value) {
+        foreach ($this->file->xpath("//fase[@id='$phase']/jogo/time[1]") as $value) {
             $team1[] =(string) $value;
         }
         //match team and goals
@@ -378,11 +357,11 @@ class Group {
             $set1[] = array($team1[$i] ,$goals1[$i] );
         }
         
-        foreach ($this->file->xpath("//fase[@id='Oitavas-de-final']/jogo/time[2]/gols") as $value) {
+        foreach ($this->file->xpath("//fase[@id='$phase']/jogo/time[2]/gols") as $value) {
             $goals2[] =(int) $value; 
         }
                 
-        foreach ($this->file->xpath("//fase[@id='Oitavas-de-final']/jogo/time[2]") as $value) {
+        foreach ($this->file->xpath("//fase[@id='$phase']/jogo/time[2]") as $value) {
             $team2[] =(string) $value;
         }
         
@@ -392,7 +371,7 @@ class Group {
             $set2[] = array($team2[$i] ,$goals2[$i] );
         }
         
-        //check what team is loser and in array
+        //check what team is loser and put array
         for($i = 0; $i < count($set2); $i++)
         {
             if($set1[$i][1] > $set2[$i][1])
@@ -400,64 +379,67 @@ class Group {
             else 
                 $loser[] = trim($set1[$i][0]);            
         }
-         
+        
+        if( $loser != null)
+            return $loser;
+        else 
+            return null;        
+    }
+
+
+    //check loser 8ª 
+    public function checkLoser8()
+    {       
+        $namePhase = "Oitavas-de-final";
+        
+        if($this->getLoser($namePhase) != null)
+        {
+            $loser = $this->getLoser($namePhase);           
+        }
         
         if ($this->checkLoserByPhase("Quartas-de-final", $loser) ||
                 $this->checkLoserByPhase("semifinal", $loser) || 
                 $this->checkLoserByPhase("final", $loser))
         {
             echo "<br>achou <br>   ";
-            exit();
-        }
-        
-        foreach ($this->file->xpath("//fase[@id='Quartas-de-final']/jogo/time") as $value)
-            $queryPhase[] =(string) trim($value);
-        
-        print_r($queryPhase);
-        
-        foreach ($loser as $value) {           
-            // echo $value;
-            if(array_search($value, $queryPhase))                                        
-            {
-              echo "<br>deu erro quartas ";
-              echo  $value; 
-              echo "<br>";
-            }
-        }
-        
-        //phase semifinal
-        foreach ($this->file->xpath("//fase[@id='semifinal']/jogo/time") as $value)
-            $queryPhase2[] =(string) trim($value);
-        
-        print_r($queryPhase2);
-        
-        foreach ($loser as $value) {           
-            // echo $value;
-            if(array_search($value, $queryPhase2))                                        
-            {
-              echo "<br>deu erro semi";
-              echo  $value; 
-              echo "<br>";
-            }
-        }                        
-        
-        //phase final
-        foreach ($this->file->xpath("//fase[@id='final']/jogo/time") as $value)
-            $queryPhase3[] =(string) trim($value);
-        
-        print_r($queryPhase3);
-        
-        foreach ($loser as $value) {           
-            // echo $value;
-            if(array_search($value, $queryPhase3))                                        
-            {
-              echo "<br>deu erro final";
-              echo  $value; 
-              echo "<br>";
-            }
-        }
+            exit(1);
+        }                
     }
-
+    
+    //check loser 4ª 
+    public function checkLoser4()
+    {       
+        $namePhase = "Quartas-de-final";
+        
+        if($this->getLoser($namePhase) != null)
+        {
+            $loser = $this->getLoser($namePhase);            
+        }
+        
+        if ( $this->checkLoserByPhase("semifinal", $loser) || 
+                $this->checkLoserByPhase("final", $loser))
+        {
+            echo "<br>achou <br>   ";
+            exit(1);
+        }                
+    }
+    
+    //check loser semifinal 
+    public function checkLoserSemi()
+    {       
+        $namePhase = "semifinal";
+        
+        if($this->getLoser($namePhase) != null)
+        {
+            $loser = $this->getLoser($namePhase);            
+        }
+        
+        if ($this->checkLoserByPhase("final", $loser))
+        {
+            echo "<br>achou <br>   ";
+            exit(1);
+        }                
+    }    
     
     public function __toString() {
         return "teste";
@@ -467,6 +449,7 @@ class Group {
     public function outputGroup()
     {
         include_once 'CreateFile.php';
+        
         new CreateFile("Grupo A","<h3>Grupo A</h3>". $this->getGroupA(),"grupoA.html");
         new CreateFile("Grupo B","<h3>Grupo B</h3>". $this->getGroupB(),"grupoB.html");
         new CreateFile("Grupo C","<h3>Grupo C</h3>". $this->getGroupC(),"grupoC.html");
