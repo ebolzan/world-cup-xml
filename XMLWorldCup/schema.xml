@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+* 
+-->
+
+<worldcup>
+    <grupo id="a">
+        <time id='Franca' />
+        <time id='Senegal' />
+        <time id='Uruguai' />
+        <time id='Dinamarca' />
+    </grupo>
+    <grupo id="b">
+        <time id='Paraguai' />
+        <time id='Africa do Sul' />
+        <time id='Espanha' />
+        <time id='Eslovenia' />
+    </grupo>
+    <grupo id="c">
+        <time id='Brasil' />
+        <time id='Turquia' />
+        <time id='China' />
+        <time id='Costa Rica' />
+    </grupo>
+    <grupo id="d">
+        <time id='Portugal' />
+        <time id='Polonia' />
+        <time id='Estados Unidos' />
+        <time id='Coreia do Sul' />
+    </grupo>
+    <grupo id="e">
+        <time id='Irlanda' />
+        <time id='Camaroes' />
+        <time id='Alemanha' />
+        <time id='Arabia Saudita' />
+    </grupo>
+    <grupo id="f">
+        <time id='Argentina' />
+        <time id='Nigeria' />
+        <time id='Inglaterra' />
+        <time id='Suecia' />
+    </grupo>
+    <grupo id="g">
+        <time id='Croacia' />
+        <time id='Mexico' />
+        <time id='Italia' />
+        <time id='Equador' />
+    </grupo>
+    <grupo id="h">
+        <time id='Japao' />
+        <time id='Belgica' />
+        <time id='Russia' />
+        <time id='Tunisia' />
+    </grupo>
+            
+    <fase id="primeira">
+        <grupo id="a">
+            <jogo>
+                <time id="1">Franca
+                    <gols>0</gols>           
+                </time> 
+                <time id="2">Senegal
+                    <gols>1</gols> 
+                </time>            
+            </jogo>    
+            
+            <jogo>
+                <time id="1">Uruguai 
+                    <gols>1</gols>
+                </time>
+                <time id="2">Dinamarca 
+                    <gols>2</gols> 
+                </time>                
+            </jogo>    
+           <jogo>
+               <time id="1">
+                   Dinamarca 
+                   <gols>1</gols>
+               </time> 
+               <time id="2"> 
+                   Senegal
+                   <gols>1</gols> 
+               </time>
+           </jogo>
+           <jogo>
+               <time id="1">Franca 
+                   <gols>0</gols> 
+               </time> 
+               <time id="2">Uruguai 
+                   <gols>0</gols> 
+               </time>
+           </jogo>
+                 
+           <jogo>
+               <time id="1">Dinamarca
+                   <gols>2</gols>
+               </time> 
+               <time id="2">Franca
+                   <gols>0</gols>
+               </time>
+           </jogo>
+                     
+            <jogo>
+                <time id="1">Senegal
+                    <gols>3</gols>
+                </time> 
+                <time id="2">Uruguai
+                    <gols>3</gols>
+                </time>             
+            </jogo>
+        </grupo>            
+                
+        <grupo id="b">
+            <jogo>
+                <time id="1">Paraguai 
+                    <gols>2</gols>                     
+                </time> 
+                <time id="2"> Africa do Sul
+                    <gols>2</gols> 
+                </time>
+            </jogo>
+            <jogo>                      
+                    <time id="1">Espanha 
+                        <gols>3</gols> 
+                    </time>
+                    <time id="2">Eslovenia 
+                        <gols>1</gols> 
+                    </time>
+            </jogo>
+            <jogo>
+                    <time id="1">Espanha 
+                        <gols>3</gols> 
+                    </time>
+                    <time id="2">Paraguai
+                        <gols>1</gols>
+                    </time>
+            </jogo>    
+        
+            <jogo>
+                    <time id="1">Africa do Sul 
+                        <gols>1</gols> 
+                    </time> 
+                    <time id="2">Eslovenia
+                        <gols>0</gols> 
+                    </time>
+            </jogo>
+         
+            <jogo>   
+                    <time id="1">Africa do Sul
+                        <gols>2</gols> 
+                    </time> 
+                    <time id="2">Espanha
+                        <gols>3</gols> 
+                    </time>
+            </jogo>
+            <jogo>       
+                    <time id="1">Eslovenia
+                        <gols>1</gols> 
+                    </time>
+                    <time id="2">Paraguai
+                        <gols>4</gols> 
+                    </time>
+            </jogo>    
+            
+        </grupo>  
+        
+        <grupo id="c">
+            	<jogo>
+                    <time id="1">Brasil  
+                        <gols>2</gols> 
+                    </time> 
+                    <time id="2">Turquia
+                        <gols>1</gols> 
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">China 
+                        <gols>0</gols> 
+                    </time>  
+                    <time id="2">Costa Rica
+                        <gols>2</gols> 
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Brasil 
+                        <gols>4</gols> 
+                    </time> 
+                    <time id="2"> China
+                        <gols>0</gols> 
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Costa Rica
+                        <gols>1</gols> 
+                    </time> 
+                    <time id="2">Turquia
+                        <gols>1</gols> 
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Costa Rica
+                        <gols>2</gols> 
+                    </time> 
+                    <time id="2">Brasil
+                        <gols>5</gols> 
+                    </time>
+                </jogo>
+                <jogo> 
+                    <time id="1">Turquia 
+                        <gols>3</gols>  
+                    </time> 
+                    <time id="2">China 
+                        <gols>0</gols> 
+                    </time>
+                </jogo>
+        </grupo>  
+        
+        <grupo id="d">            
+            <jogo>
+                <time id="1">Coreia do Sul 
+                    <gols>2</gols> 
+                </time> 
+                <time id="2">Polonia                    
+                    <gols>0</gols> 
+                </time>
+            </jogo>             
+            <jogo>
+                <time id="1">Estados Unidos
+                    <gols>3</gols> 
+                </time> 
+                <time id="2">Portugal
+                    <gols>2</gols> 
+                </time>
+            </jogo>             
+            <jogo>
+                <time id="1">Coreia do Sul 
+                    <gols>1</gols>  
+                </time> 
+                <time id="2">Estados Unidos
+                    <gols>1</gols> 
+                </time>
+            </jogo>             
+            <jogo>
+                <time id="1">Portugal 
+                    <gols>4</gols>  
+                </time> 
+                <time id="2">Polonia
+                    <gols>0</gols> 
+                </time>
+            </jogo>             
+            <jogo>
+                <time id="1">Polonia 
+                    <gols>3</gols>  
+                </time>
+                <time id="2">Estados Unidos
+                    <gols>1</gols> 
+                </time>
+            </jogo>             
+            <jogo>
+                <time id="1">Portugal 
+                    <gols>0</gols>  
+                </time>
+                <time id="2">Coreia do Sul
+                    <gols>1</gols> 
+                </time>
+            </jogo>             
+        </grupo>  
+        
+        
+        <grupo id="e">
+            <jogo>
+                <time id="1">Irlanda 
+                    <gols>1</gols> 
+                </time>
+                <time id="2">Camaroes
+                    <gols>1</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Alemanha
+                    <gols>8</gols>
+                </time>
+                <time id="2">Arabia Saudita
+                    <gols>0</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Alemanha 
+                    <gols>1</gols>
+                </time>
+                <time id="2">Irlanda
+                    <gols>1</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Camaroes 
+                    <gols>1</gols>
+                </time>
+                <time id="2">Arabia Saudita
+                    <gols>0</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Camaroes 
+                    <gols>0</gols>
+                </time>
+                <time id="2">Alemanha
+                    <gols>2</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Arabia Saudita 
+                    <gols>0</gols> 
+                </time>
+                <time id="2">Irlanda
+                    <gols>3</gols>
+                </time>
+            </jogo>
+        </grupo>  
+        
+        <grupo id="f">
+            <jogo>
+                <time id="1">Argentina 
+                    <gols>1 </gols>
+                </time>
+                <time id="2">Nigeria
+                    <gols>0</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Inglaterra
+                    <gols> 1 </gols>
+                </time>
+                <time id="2">Suecia
+                    <gols>1</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Suecia 
+                    <gols>4 </gols>
+                </time> 
+                <time id="2">Nigeria
+                    <gols>1</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Argentina
+                    <gols> 0 </gols>
+                </time> 
+                <time id="2">Inglaterra
+                    <gols>2</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Suecia 
+                    <gols>1 </gols>
+                </time> 
+                <time id="2">Argentina
+                    <gols>1</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Nigeria 
+                    <gols>0 </gols>
+                </time> 
+                <time id="2">Inglaterra 
+                    <gols>0</gols>
+                </time>
+            </jogo>
+        </grupo>
+          
+        <grupo id="g">
+                <jogo>
+                    <time id="1">Croacia
+                        <gols> 0 </gols>
+                    </time>
+                    <time id="2">Mexico
+                        <gols>1</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Italia 
+                        <gols>2 </gols>
+                    </time>
+                    <time id="2">Equador
+                        <gols>0</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Italia 
+                        <gols>1 </gols>
+                    </time>
+                    <time id="2">Croacia
+                        <gols>2</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Mexico 
+                        <gols>2 </gols>
+                    </time>
+                    <time id="2">Equador
+                        <gols>1</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Equador 
+                        <gols>1 </gols>
+                    </time>
+                    <time id="2">Croacia
+                        <gols>0</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Mexico 
+                        <gols>1 </gols>
+                    </time>
+                    <time id="2">Italia 
+                        <gols>1</gols>
+                    </time>
+                </jogo>
+        </grupo>
+          
+        <grupo id="h">
+            	<jogo>
+                    <time id="1">Japao 
+                        <gols>2 </gols>
+                    </time>
+                    <time id="2">Belgica
+                        <gols>2</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Russia 
+                        <gols>2 </gols>
+                    </time>
+                    <time id="2">Tunisia
+                        <gols>0</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Japao 
+                        <gols>1 </gols>
+                    </time>
+                    <time id="2">Russia
+                        <gols>0</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Tunisia 
+                        <gols>1 </gols>
+                    </time>
+                    <time id="2">Belgica
+                        <gols>1</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Belgica 
+                        <gols>3 </gols>
+                    </time>
+                    <time id="2">Russia
+                        <gols>2</gols>
+                    </time>
+                </jogo>
+                <jogo>
+                    <time id="1">Tunisia 
+                        <gols>0 </gols>
+                    </time>
+                    <time id="2">Japao
+                        <gols>2</gols>
+                    </time>
+                </jogo>
+        </grupo>  
+                
+    </fase>
+    
+    <fase id="Oitavas-de-final">
+        <jogo>
+            <time id="1">Alemanha 
+                <gols>1 </gols>
+            </time>
+            <time id="2">Paraguai
+                <gols>0</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time d="1">Dinamarca
+                <gols> 0 </gols>
+            </time>
+            <time id="2">Inglaterra
+                <gols>3</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time id="1">Suecia 
+                <gols>1 </gols>
+            </time>
+            <time id="2">Senegal
+                <gols>2</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time id="1">Espanha 
+                <gols>3 </gols>
+            </time>
+            <time id="2">Irlanda
+                <gols>2</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time id="1">Mexico 
+                <gols>0 </gols>
+            </time>
+            <time id="2">Estados Unidos
+                <gols>2</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time id="1">Brasil
+                <gols>2 </gols>
+            </time>
+            <time id="2">Belgica
+                <gols>0</gols>
+            </time>
+        </jogo>
+        <jogo>            
+            <time id="1">Japao 
+                <gols>0 </gols>
+            </time>
+            <time id="2">Turquia
+                <gols>1</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time id="1">Coreia do Sul
+                <gols> 2 </gols>
+            </time>
+            <time id="2">Italia
+                <gols>1</gols>
+            </time>
+        </jogo>
+    </fase>
+    
+    <fase id="Quartas-de-final">
+            <jogo>
+                <time id="1">Inglaterra
+                    <gols> 1 </gols>
+                </time>
+                <time id="2">Brasil
+                    <gols>2</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Alemanha
+                    <gols> 1 </gols>
+                </time>
+                <time id="2">Estados Unidos
+                    <gols>0</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Espanha
+                    <gols> 3 </gols>
+                </time>
+                <time id="2">Coreia do Sul
+                    <gols>5</gols>
+                </time>
+            </jogo>
+            <jogo>
+                <time id="1">Senegal
+                    <gols> 0 </gols>
+                </time>
+                <time id="2">Turquia 
+                    <gols>1</gols>
+                </time>
+            </jogo>
+    </fase>
+    
+    <fase id="semifinal">        
+        <jogo>
+            <time id="1">Alemanha 
+                <gols>1 </gols>
+            </time>
+            <time id="2"> Coreia do Sul
+                <gols>0</gols>
+            </time>
+        </jogo>
+        <jogo>
+            <time id="1">Brasil 
+                <gols>1 </gols>
+            </time>
+            <time id="2"> Turquia
+                <gols>0</gols>
+            </time>
+        </jogo>
+    </fase>
+    
+    <fase id="terceiro-lugar">
+        <jogo>
+            <time id="1">Coreia do Sul
+                <gols> 2</gols>
+            </time>
+            <time id="2">Turquia
+                <gols>3 </gols>
+            </time>
+        </jogo>
+    </fase>
+    
+    <fase id="final">
+        <jogo>
+            <time id="1">Brasil
+                <gols>2</gols>
+            </time>
+            <time id="2">Alemanha
+                <gols>0</gols>
+            </time>
+        </jogo>
+    </fase>
+</worldcup>
