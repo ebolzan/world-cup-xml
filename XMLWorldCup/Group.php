@@ -309,18 +309,21 @@ class Group {
             if(array_search($value, $queryPhase4))                                        
             {
               echo "fase quartas ";
+              new TMessage("error", "Validação encontrou um erro");
               exit(1);
             }
             
             if(array_search($value, $queryPhase2))                                        
             {
               echo "fase semifinais ";
+              new TMessage("error", "Validação encontrou um erro");
               exit(1);
             }                        
             
             if(array_search("China", $queryPhase1))                                        
             {
               echo "fase final ";
+              new TMessage("error", "Validação encontrou um erro");
               exit(1);
             }                        
         }                           
@@ -402,6 +405,7 @@ class Group {
                 $this->checkLoserByPhase("final", $loser))
         {
             echo "<br>achou <br>   ";
+            new TMessage("error", "Validação encontrou um erro");
             exit(1);
         }                
     }
@@ -420,6 +424,7 @@ class Group {
                 $this->checkLoserByPhase("final", $loser))
         {
             echo "<br>achou <br>   ";
+            new TMessage("error", "Validação encontrou um erro");
             exit(1);
         }                
     }
@@ -437,6 +442,7 @@ class Group {
         if ($this->checkLoserByPhase("final", $loser))
         {
             echo "<br>achou <br>   ";
+            new TMessage("error", "Validação encontrou um erro");
             exit(1);
         }                
     }    
