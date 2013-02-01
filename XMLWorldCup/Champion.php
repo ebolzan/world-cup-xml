@@ -38,8 +38,7 @@ class Champion {
     public function getGamesChampion()
     {
         //test if change brasil per this->winer to works
-        $vet = $this->file->xpath("//time[contains(., 'Brasil')]/..");
-        
+        $vet = $this->file->xpath("//time[contains(., 'Brasil')]/..");        
         $string = "";
         
         foreach ($vet as $key => $value) {
@@ -50,6 +49,7 @@ class Champion {
         return $string;
     }
     
+    //output format html 
     public function outputChampion()
     {
         include_once 'CreateFile.php';

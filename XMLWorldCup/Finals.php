@@ -1,14 +1,13 @@
 <?php
 /**
- * Description of Finals
+ * Description of Finals, make games of team champion
  *
- * @author evandro
+ * @author evandro, l felipe
  */
 class Finals {
     //put your code here
     private $start;
     private $end;
-    
     private $file;
 
     public function __construct($start, $end) {
@@ -17,6 +16,8 @@ class Finals {
         $this->end = $end;
         $this->file = simplexml_load_file("schema.xml");         
     }
+    
+    //get primeira format html output
     public function getPrimeira()
     {
         //Oitavas-de-final
@@ -32,6 +33,7 @@ class Finals {
         return $string;
     }
 
+    //get oitavas format html output
     public function getOitavas()
     {
         //Oitavas-de-final
@@ -47,6 +49,7 @@ class Finals {
         return $string;        
     }
     
+    //get quartas format html output
     public function getQuartas()
     {
         //Quartas-de-final
@@ -62,6 +65,7 @@ class Finals {
         return $string;        
     }
     
+    //get semifinais format html output
     public function getSemifinais()
     {        
         //seminifinais
@@ -77,6 +81,7 @@ class Finals {
         return $string;
     }
     
+    //get game final, format hmtl
     public function getFinal()
     {
         $vet = $this->file->xpath("//fase[@id='final']/jogo");
@@ -91,6 +96,7 @@ class Finals {
         return $string;        
     }
 
+    //print html out
     public function outputFinal()
     {    
         include_once 'CreateFile.php';                
@@ -105,10 +111,6 @@ class Finals {
         new CreateFile("Semifinal de Final", "<h2>Semifinal</h2>".
                 $this->getSemifinais()."<a href='final.html'>next</a>","semifinal.html");                
         new CreateFile("Final", "<h2>Final</h2>".$this->getFinal(),"final.html");                
-    }
-
-        public function __toString() {
-        ;
-    }
+    }    
 }
 ?>

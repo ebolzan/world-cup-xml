@@ -1,14 +1,11 @@
 <?php
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * create files format html output
  */
 
-/**
- * Description of CreateFile
- *
- * @author evandro
+/** 
+ * @author evandro, l felipe
  */
 class CreateFile {
     //put your code here
@@ -55,9 +52,7 @@ class CreateFile {
     {
         $file = $this->header($this->title);
         $file .=$this->main($this->text);
-        $file .=$this->footer("<div><a href='home.html'>HOME</a></div>");
-
-        
+        $file .=$this->footer("<div><a href='home.html'>HOME</a></div>");        
         
         //create file with content
         if(file_put_contents($this->name, $file))

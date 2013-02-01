@@ -1,28 +1,24 @@
-
         <?php
                 include 'Group.php';
                 include 'Finals.php';
-                include 'Champion.php';
+                include 'Champion.php';                
                 
-                $ob = new Group("<h2>", "</h2>");                
+                //object group
+                $ob = new Group("<h2>", "</h2>");                                                
+                $ob->outputGroup();    
                 
-                //$ob->sumGols("Brasil", "a");
-                
-                $ob->checkLoser8("teste");
-                $ob->outputGroup();
-                
-                
-                echo "teste<br>";
-                $ob->checkLoser8("qualqer");
-                echo "<br>teste<br>";
-                
-                
+                //check if some team loser is somewhere wrong
+                $ob->checkLoserGroup();
+                $ob->checkLoser8();
+                $ob->checkLoser4();
+                $ob->checkLoserSemi();
+                                  
+                //object final
                 $final = new Finals("<h3>", "</h3>");
                 $final->outputFinal();
                 
-                $winner = new Champion("<h3>", "</h3>");
-                                
-                $winner->outputChampion();
-                            
+                //object champion
+                $winner = new Champion("<h3>", "</h3>");                                
+                $winner->outputChampion();                            
         ?>
    
