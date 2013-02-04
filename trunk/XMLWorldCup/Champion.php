@@ -2,7 +2,7 @@
 /**
  * Description of Champion
  *
- * @author evandro
+ * @author evandro mais
  */
 class Champion {
     //put your code here
