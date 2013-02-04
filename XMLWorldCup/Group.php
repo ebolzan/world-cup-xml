@@ -333,7 +333,24 @@ class Group {
     public function checkLoserByPhase($phase, $loser)
     {        
         foreach ($this->file->xpath("//fase[@id='$phase']/jogo/time") as $value)
-            $queryPhase[] =(string) trim($value);              
+            $queryPhase[] =(string) trim($value);  
+        
+        echo "\nfase is $phase\n";
+        
+        if($phase == "final")
+        {
+            foreach ($queryPhase as $value) {                
+                
+                foreach ($loser as $value2) {
+                    if(strcmp($value, $value2)==0)
+                        echo "deu errro";
+                    
+                    //echo "$value2  ";
+                }
+                
+            }
+            return FALSE;
+        }
         
         foreach ($loser as $value) {           
             // echo $value;
@@ -404,7 +421,7 @@ class Group {
                 $this->checkLoserByPhase("semifinal", $loser) || 
                 $this->checkLoserByPhase("final", $loser))
         {
-            echo "<br>achou <br>   ";
+            echo "<br>achou erro <br>   ";
             new TMessage("error", "Validação encontrou um erro");
             exit(1);
         }                
@@ -412,7 +429,9 @@ class Group {
     
     //check loser 4ª 
     public function checkLoser4()
-    {       
+    {   
+        
+        
         $namePhase = "Quartas-de-final";
         
         if($this->getLoser($namePhase) != null)
