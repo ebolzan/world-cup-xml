@@ -102,8 +102,7 @@ class Finals {
         include_once 'CreateFile.php';                
         
         new CreateFile("Primeira fase", "<h2>Primeira fase</h2>".
-                $this->getPrimeira()."<a href='oitavas.html'>next</a>","primeira.html");
-        
+                $this->getPrimeira()."<a href='oitavas.html'>next</a>","primeira.html");        
         new CreateFile("Oitavas de Final", "<h2>Oitavas de Final</h2>".
                 $this->getOitavas()."<a href='quartas.html'>next</a>","oitavas.html");
         new CreateFile("Quartas de Final", "<h2>Quartas de Final</h2>".
